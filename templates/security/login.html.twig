@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}login {% endblock %}
 
 {% block body %}
 <style>
@@ -9,6 +9,7 @@
 </style>
 
 <div class="example-wrapper">
+    <h1>La page de login</h1>
     {% if error %}
         <div class="alert alert-danger">
             {{ error.messageKey|trans(error.messageData, 'security') }}
@@ -16,14 +17,17 @@
     {% endif %}
 <div>
         <form action="{{ path('security_login') }}" method="post">
-                <label for="username">Email</label>
-                <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control"/>
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="_password" class="form-control" />
-                <input type="hidden" name="_target_path" value="{{ app.request.get('redirect_to') }}"/>
-                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
-                <button type="submit" class="btn btn-primary">Connexion</button>
-        </form>
+
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="_password" />
+            <input type="hidden" name="_target_path" value="{{ app.request.get('redirect_to') }}"/>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+
+
+                        <button type="submit">login</button></form>
 </div>
 
 </div>
