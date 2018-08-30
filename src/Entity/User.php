@@ -49,6 +49,12 @@ class User implements UserInterface,\Serializable
      * @ORM\Column(type="array")
      */
     private $roles = [];
+
+    public function __construct()
+    {
+        $this->roles = ['ROLE_USER'];
+    }
+
     public function getId(): int
     {
         return $this->id;
@@ -57,11 +63,11 @@ class User implements UserInterface,\Serializable
     {
         $this->fullName = $fullName;
     }
-    public function getFullName(): string
+    public function getFullName()
     {
         return $this->fullName;
     }
-    public function getUsername(): string
+    public function getUsername()
     {
         return $this->username;
     }
@@ -69,7 +75,7 @@ class User implements UserInterface,\Serializable
     {
         $this->username = $username;
     }
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -77,7 +83,7 @@ class User implements UserInterface,\Serializable
     {
         $this->email = $email;
     }
-    public function getPassword(): string
+    public function getPassword()
     {
         return $this->password;
     }
@@ -91,14 +97,16 @@ class User implements UserInterface,\Serializable
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantees that a user always has at least one role for security
-        if (empty($roles)) {
+        if(empty($roles)){
             $roles[] = 'ROLE_USER';
         }
         return array_unique($roles);
     }
     public function setRoles(array $roles): void
     {
+        if(empty($roles)){
+            $this->roles = 'ROLE_USER';
+        }
         $this->roles = $roles;
     }
     /**
