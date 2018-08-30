@@ -51,3 +51,5 @@ var/log/dev.log
 *.log
 /var/log/*
 !var/log/.gitkeep
+var/log/dev.log
+*.log
