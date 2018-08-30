@@ -772,3 +772,6 @@
 [2018-08-30 10:30:20] request.INFO: Matched route "security_login". {"route":"security_login","route_parameters":{"_route":"security_login","_controller":"App\\Controller\\SecurityController::login"},"request_uri":"http://localhost/asproject/public/index.php/login","method":"GET"} []
 [2018-08-30 10:30:20] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2018-08-30 10:30:20] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"e6c9e1"},"request_uri":"http://localhost/asproject/public/index.php/_wdt/e6c9e1","method":"GET"} []
+[2018-08-30 10:32:58] request.INFO: Matched route "security_login". {"route":"security_login","route_parameters":{"_route":"security_login","_controller":"App\\Controller\\SecurityController::login"},"request_uri":"http://localhost/asproject/public/index.php/login","method":"GET"} []
+[2018-08-30 10:32:58] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2018-08-30 10:32:58] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"ee4854"},"request_uri":"http://localhost/asproject/public/index.php/_wdt/ee4854","method":"GET"} []
