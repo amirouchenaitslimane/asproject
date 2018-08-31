@@ -53,3 +53,10 @@ var/log/dev.log
 !var/log/.gitkeep
 var/log/dev.log
 *.log
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-pack ###

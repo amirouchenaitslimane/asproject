@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -20,27 +21,34 @@ class User implements UserInterface,\Serializable
      * @var string
      *
      * @ORM\Column(type="string")
-     *
+     * @Assert\NotBlank()
      */
     private $fullName;
     /**
      * @var string
      *
      * @ORM\Column(type="string", unique=true)
-     *
+     * @Assert\NotBlank()
      */
     private $username;
     /**
      * @var string
      *
      * @ORM\Column(type="string", unique=true)
-     *
+     *  @Assert\Email(
+     *     message = "L'email '{{ value }}' n'est pas valide !.",
+     *     checkMX = true
+     * )
      */
     private $email;
     /**
      * @var string
      *
      * @ORM\Column(type="string")
+     * @Assert\Length(
+     *      min = 4,     *
+     *      minMessage = "Le mot de passe introduit doit etre superieur á  {{ limit }}  charactéres",
+     *  )
      */
     private $password;
     /**
