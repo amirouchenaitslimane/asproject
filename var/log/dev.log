@@ -1276,3 +1276,6 @@
 [2018-08-31 21:16:23] request.INFO: Matched route "user_registration". {"route":"user_registration","route_parameters":{"_route":"user_registration","_controller":"App\\Controller\\UserController::inscription"},"request_uri":"http://localhost/asproject/public/index.php/inscription","method":"GET"} []
 [2018-08-31 21:16:23] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2018-08-31 21:16:24] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"0c5399"},"request_uri":"http://localhost/asproject/public/index.php/_wdt/0c5399","method":"GET"} []
+[2018-08-31 21:46:01] request.INFO: Matched route "user_registration". {"route":"user_registration","route_parameters":{"_route":"user_registration","_controller":"App\\Controller\\UserController::inscription"},"request_uri":"http://localhost/asproject/public/index.php/inscription","method":"GET"} []
+[2018-08-31 21:46:02] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2018-08-31 21:46:07] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"d317d7"},"request_uri":"http://localhost/asproject/public/index.php/_wdt/d317d7","method":"GET"} []
